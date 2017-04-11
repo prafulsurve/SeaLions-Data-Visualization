@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Enter, Update, Exits</title>
+  </head>
+  <body>
+    <h1>Data Visualization for Sea Lions and Sea Level</h1>
+    <label>Outer Circle: Sea Level and Inner Circle: Sea Lions</label><br>
+    <label for="sealevel_range" id="label_sealevel">Sea Level: </label><br>
+    <input type="range" id="sealevel_range" min="0.005" max="0.030" step ="0.0002" value="0.008" oninput="setOuterDomain(this.value)">
+    <br><br>
+    <label for="sealions_range" id="label_sealions">Sea Lions: </label><br>
+    <input type="range" id="sealions_range" min="30000" max="70000" step ="400" oninput="setInnerDomain(this.value)">
+    <br>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+  </body>
+</html>
